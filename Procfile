@@ -1,1 +1,1 @@
-web: gunicorn 'moment_count.wsgi'
+web: gunicorn moment_count.wsgi --log-file-
