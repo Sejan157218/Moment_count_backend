@@ -4,7 +4,7 @@
         "builder": "NIXPACKS"
     },
     "deploy": {
-        "startCommand": "python manage.py migrate && python manage.py collectstatic --noinput && gunicorn moment_count.wsgi --forwarded-allow-ips '*'",
+        "startCommand": "python manage.py migrate && python manage.py collectstatic --noinput && pkill gunicorn && gunicorn moment_count.wsgi --forwarded-allow-ips '*'",
         "restartPolicyType": "ON_FAILURE",
         "restartPolicyMaxRetries": 10
     }
