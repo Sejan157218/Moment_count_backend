@@ -4,8 +4,8 @@ from django.core.validators import MinValueValidator, MaxValueValidator
 # Create your models here.
 
 class BestSelling(models.Model):
-    frontImg = models.ImageField(upload_to='bestselling')
-    backImg = models.ImageField(upload_to='bestselling')
+    frontImg = models.CharField(max_length=300, help_text="Provide a image link")
+    backImg = models.CharField(max_length=300, help_text="Provide a image link")
     brand = models.CharField(max_length=50)
     title = models.CharField(max_length=50)
     price = models.DecimalField(max_digits=12, decimal_places=2)
