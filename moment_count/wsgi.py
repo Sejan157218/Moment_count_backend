@@ -15,5 +15,4 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'moment_count.settings')
 
 application = get_wsgi_application()
 
-app = application
 
